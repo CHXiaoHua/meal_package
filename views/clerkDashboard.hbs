@@ -1,0 +1,26 @@
+    <body>
+        <div id="heroSection">
+            <img class="homebanner" src="images/homebanner.jpg" alt="homebanner">
+        </div>
+        <h3>{{welcome}}</h3>
+        <div id="mealpackage">
+            <h2>Meal Package List</h2>
+            <a href="addmealpackage">Add Meal Package</a>
+            <a href="selectmealpackage">Update a Meal Package</a>
+            <div id="allpackages">
+            {{#each mealPackage}}
+                <div id="packagelist">
+                    <img src={{path}} alt={{title}}>
+                    {{#if istopmeal}}
+                        <p id="istop">Top Package!</p>
+                    {{/if}}
+                    <h4>{{this.title}} ({{this.number}}pcs)</h4>
+                    <h4>${{price}}</h4>
+                    <h5>{{desc}}</h5>
+                    <h5>Category: {{category}}</h5>
+                </div>
+            {{/each}}
+            </div>
+        </div>
+        <a href="/logout">Logout</a>
+    </body>

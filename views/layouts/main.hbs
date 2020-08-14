@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{{title}}</title>
+        <link rel='stylesheet' href='css/normalize.css' type='text/css' media='screen'>
+    </head>
+
+    <body>
+        <!-- Top Menu -->
+        <header>
+            <img class="logo" src="images/logo.png" alt="Logo">
+            <nav id="headermenu">
+                <ul>
+                    {{#each navitems}}
+                    <li><a href={{url}}>{{string}}</a></li>
+                    {{/each}}
+               </ul>
+            </nav>
+        </header>
+        <main>
+            {{{body}}}
+        </main>
+        <!-- footer -->
+        <footer>
+            <div id="footermenu">
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="">Terms</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Refund Policy</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="socialmedia">
+                <nav>
+                    <ul>
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Twitter</a></li>
+                        <li><a href="">Our Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </body>
+</html>

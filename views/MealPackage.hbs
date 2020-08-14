@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{{title}}</title>
+        <link rel='stylesheet' href='css/normalize.css' type='text/css' media='screen'>
+    </head>
+    <body>
+        <div id="heroSection">
+            <img class="packagebanner" src="images/packagebanner.jpg" alt="packagebanner">
+        </div>
+        <div id="mealpackage">
+            <h2>Eat Easy!</h2>
+            <div id="allpackages">
+            {{#each mealPackage}}
+                <div id="packagelist">
+                    <img src={{path}} alt={{title}}>
+                    {{#if istopmeal}}
+                        <p id="istop">Top Package!</p>
+                    {{/if}}
+                    <h4>{{this.title}} ({{this.number}}pcs)</h4>
+                    <h4>${{price}}</h4>
+                    <h5>{{desc}}</h5>
+                    <h5>Category: {{category}}</h5>
+                </div>
+            {{/each}}
+            </div>
+        </div>
+    </body>
+</html>

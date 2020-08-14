@@ -1,0 +1,17 @@
+<body>
+    <div id="heroSection">
+        <img class="homebanner" src="images/homebanner.jpg" alt="homebanner">
+   </div>
+    <div id="formheading">
+        <h2>{{selected}}</h2>
+    </div>
+    <div id="selectform">
+        <form action="/selectmealpackage" method="post">
+            <select style="width:100%" id="title" name="title"/>
+            {{#each mealpackage}}
+                <option value='{{this.title}}'>{{this.title}}</option> 
+            {{/each}}
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+</body>

@@ -1,0 +1,43 @@
+<body>
+    <div id="heroSection">
+        <img class="homebanner" src="images/homebanner.jpg" alt="homebanner">
+   </div>
+    <div id="formheading">
+        <h2>{{selected}}</h2>
+    </div>
+    <div id="updateform">
+        <form action="/updatemealpackage" method="post">
+            <input style="width:100%" id="oldtitle" type="hidden"  name="oldtitle" value='{{selected}}'>
+            <label for="title">New Title:</label>
+            <input style="width:100%" id="ntitle" type="text" name="ntitle"/>
+            {{#if tltri}}
+                <div class="error">{{tlerr}}</div>
+            {{/if}}
+            <label for="nprice">New Price:</label>
+            <input style="width:100%" id="nprice" type="number" name="nprice"/>
+            {{#if prtri}}
+                <div class="error">{{prerr}}</div>
+            {{/if}}
+            <label for="ndesc">New Description:</label>
+            <textarea style="width:100%" id="desc" name="desc" cols="30"/></textarea>
+            {{#if dctri}}
+                <div class="error">{{dcerr}}</div>
+            {{/if}}
+            <label for="ncategory">New Category:</label>
+            <input style="width:100%" id="ncategory" type="text" name="ncategory"/>
+            {{#if cattri}}
+                <div class="error">{{caterr}}</div>
+            {{/if}}
+            <label for="nnumber">New Number of Meals:</label>
+            <input style="width:100%" id="nnumber" type="number" name="nnumber"/>
+            {{#if numtri}}
+                <div class="error">{{numerr}}</div>
+            {{/if}}
+            <label for="nistopmeal">Top Meal Package?</label>
+            <select style="width:60%" id="nistopmeal" name="nistopmeal"/>
+                <option value= "y">Yes</option> 
+                <option value= "n">No</option>
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+</body>

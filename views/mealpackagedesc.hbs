@@ -1,0 +1,23 @@
+<body>
+    <div id="heroSection">
+        <img class="packagebanner" src="images/packagebanner.jpg" alt="packagebanner">
+    </div>
+    <div id="mealpackage">
+        
+            <div id="description">
+                <img src={{path}} alt={{mptitle}} id="descpic">
+                <div id="desc">
+                    <h2>{{mptitle}}</h2>
+                    <h3>${{price}}</h3>
+                    <h3>{{number}} Meals Within the Package</h3>
+                    <form action="/mealpackagedesc" method="post">
+                        <input type="hidden" id="title" name="title" value='{{mptitle}}'>
+                        <input type="hidden" id="price" name="price" value={{price}}>
+                        <input type="hidden" id="number" name="number" value={{number}}>
+                    <button value='{{mptitle}}' type="submit">ADD TO ORDER</button>
+                    </form>
+                    <h3>{{desc}}</h3>
+                </div>    
+            </div>
+    </div>
+</body>

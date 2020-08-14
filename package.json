@@ -1,0 +1,26 @@
+{
+  "name": "assignment01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zhaohui Li",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "client-sessions": "^0.8.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.6",
+    "mongoose": "^5.9.28",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.10",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "handlebars": "^4.7.6"
+  }
+}

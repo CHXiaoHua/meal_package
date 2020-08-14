@@ -1,0 +1,34 @@
+
+    <body>
+        <div id="heroSection">
+            <img class="homebanner" src="images/homebanner.jpg" alt="homebanner">
+        </div>
+        <div id="formheading">
+            <h2>Create Account</h2>
+        </div>
+        <div>
+            <form action="/CustomerRegistration" method="POST" style="margin-Bottom: 50px" id="registerform">
+                <td><label for="firstname">First Name:</label>
+                <td><input style="width:100%" id="firstname" type="text" name="firstname"/>
+                {{#if fntri}}
+                    <div class="error">{{fnerr}}</div>
+                {{/if}}
+                <label for="lastname">Last Name:</label></td>
+                <input style="width:100%" id="lastname" type="text" name="lastname"/>
+                {{#if lntri}}
+                    <div class="error">{{lnerr}}</div>
+                {{/if}}
+                <label for="email">Email:</label></td>
+                <input style="width:100%" id="email" type="email" name="email"/>
+                {{#if emtri}}
+                    <div class="error">{{emerr}}</div>
+                {{/if}}
+                <label for="password">Password:</label>
+                <input style="width:100%" id="password" type="text" name="password"/>
+                {{#if pwtri}}
+                    <div class="error">{{pwerr}}</div>
+                {{/if}}
+                <button id="SignUp" type="submit">Sign Up</button>                   
+            </form>
+        </div>
+    </body>

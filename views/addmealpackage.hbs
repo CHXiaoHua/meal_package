@@ -1,0 +1,50 @@
+<body>
+    <div id="heroSection">
+        <img class="homebanner" src="images/homebanner.jpg" alt="homebanner">
+   </div>
+    <div id="formheading">
+        <h2>Customer Login</h2>
+    </div>
+    <div id="addform">
+        <form action="/addmealpackage" method="post" enctype="multipart/form-data">
+            <label for="title">Title:</label>
+            <input style="width:100%" id="title" type="text" name="title"/>
+            {{#if tltri}}
+                <div class="error">{{tlerr}}</div>
+            {{/if}}
+            <label for="price">Price:</label>
+            <input style="width:100%" id="price" type="number" name="price"/>
+            {{#if prtri}}
+                <div class="error">{{prerr}}</div>
+            {{/if}}
+            <label for="desc">Description:</label>
+            <textarea style="width:100%" id="desc" name="desc"/></textarea>
+            {{#if dctri}}
+                <div class="error">{{dcerr}}</div>
+            {{/if}}
+            <label for="category">Category:</label>
+            <input style="width:100%" id="category" type="text" name="category"/>
+            {{#if cattri}}
+                <div class="error">{{caterr}}</div>
+            {{/if}}
+            <label for="number">Number of Meals:</label>
+            <input style="width:100%" id="number" type="number" name="number"/>
+            {{#if numtri}}
+                <div class="error">{{numerr}}</div>
+            {{/if}}
+            <label for="istopmeal">Top Meal Package?</label>
+            <select style="width:60%" id="istopmeal" name="istopmeal"/>
+                <option value= "y">Yes</option> 
+                <option value= "n">No</option>
+            <label for="photo">Photo File: </label>
+            <input id="photo" type="file" name="photo"/><br />
+            {{#if filetri}}
+                <div class="error">{{fileerr}}</div>
+            {{/if}}
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+    <div id="forgotpw">
+        <a href="">Forgot your password?</a>
+    </div>
+</body>

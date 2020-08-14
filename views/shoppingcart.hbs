@@ -1,0 +1,22 @@
+    <body>
+        <div id="heroSection">
+            <img class="packagebanner" src="images/packagebanner.jpg" alt="packagebanner">
+        </div>
+        <div id="cartlist">
+            <h2>Shopping Cart</h2>
+            <div>
+            <ul>
+                {{#each mealPackage}}
+                    <li>{{this.title}} ({{this.number}}pcs)      ${{price}}</li>
+                {{/each}}
+            </ul>
+            </div>
+            <h3>-------------------</h3>
+            <h3>Total: {{total}}</h3>
+            <form action="/shoppingcart" method="post">
+                <input type="hidden" id="total" name="total" value='{{total}}'>
+                <input type="hidden" id="mealPackage" name="mealPackage" value={{mealPackage}}>
+                <button value='{{title}}' type="submit" id="button" name="button">Place your order</button>
+            </form>
+        </div>
+    </body>

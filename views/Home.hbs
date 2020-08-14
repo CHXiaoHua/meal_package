@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{{title}}</title>
+        <link rel='stylesheet' href='css/normalize.css' type='text/css' media='screen'>
+    </head>
+    <body>
+        <div id="heroSection">
+            <img class="homebanner" src="images/homebanner.jpg" alt="homebanner">
+        </div>
+        <div id="contentSection">
+            <h2>Delicious Food Straight To Your Door</h2>
+            <div id="allcontent">
+                {{#each contentitems}}
+                    <div id="contentdata">
+                        <img src={{path}} alt={{title}}>
+                        <h4>{{title}}</h4>
+                        <h5>{{text}}</h5>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+        <div id="topmeal">
+            <h2>Top and Popular Meal For You</h2>
+            <div id="alltopmeal">
+                {{#each topmealitems}}
+                    {{#if this.istopmeal}}
+                        <div id="topmealitems">
+                            <img src={{this.path}} alt={{this.title}}>
+                            <h5>{{this.title}} ({{this.number}}pcs)</h5>
+                            <h4>${{this.price}}</h4>
+                        </div>
+                    {{/if}}
+                {{/each}}
+            </div>
+        </div>
+    </body>
+</html>

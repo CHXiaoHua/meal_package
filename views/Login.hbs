@@ -1,0 +1,26 @@
+    <body>
+        <div id="heroSection">
+            <img class="homebanner" src="images/homebanner.jpg" alt="homebanner">
+        </div>
+        <div id="formheading">
+            <h2>Login</h2>
+        </div>
+        <div>
+            <form action="/Login" method="post" id="loginform">
+                <label for="email">Email:</label>
+                <input style="width:100%" id="email" type="email" name="email"/>
+                {{#if emtri}}
+                    <div class="error">{{emerr}}</div>
+                {{/if}}
+                <label for="password">Password:</label></td>
+                <input style="width:100%" id="password" type="password" name="password"/>
+                {{#if pwtri}}
+                    <div class="error">{{pwerr}}</div>
+                {{/if}}
+                <button id="login" type="submit">Login</button>
+            </form>
+        </div>
+        <div id="forgotpw">
+            <a href="">Forgot your password?</a>
+        </div>
+    </body>

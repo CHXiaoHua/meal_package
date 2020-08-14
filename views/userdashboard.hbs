@@ -1,0 +1,26 @@
+    <body>
+        <div id="heroSection">
+            <img class="packagebanner" src="images/packagebanner.jpg" alt="packagebanner">
+        </div>
+        <div id="mealpackage">
+            <h2>Eat Easy!</h2>
+            <div id="allpackages">
+            {{#each mealPackage}}
+                <div id="packagelist">
+                    <img src={{path}} alt={{title}}>
+                    {{#if istopmeal}}
+                        <p id="istop">Top Package!</p>
+                    {{/if}}
+                    <h4>{{this.title}} ({{this.number}}pcs)</h4>
+                    <h4>${{price}}</h4>
+                    <h5>{{desc}}</h5>
+                    <h5>Category: {{category}}</h5>
+                    <form action="/userDashboard" method="post" id="viewbutton">
+                    <button value='{{title}}' type="submit" id="button" name="button">View Package</button>
+                    </form>
+                </div>
+            {{/each}}
+            </div>
+            <a href="/shoppingcart">View Shopping Cart</a>
+        </div>
+    </body>

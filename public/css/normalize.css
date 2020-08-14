@@ -1,0 +1,277 @@
+body {
+    margin: auto;
+    padding: 0;
+    font-family: "Time New Roman", Georgia;
+    width: 960px;
+}
+
+header {
+    width: 960px;
+}
+
+.logo {
+    width: 8%;
+    max-width: 100%;
+    float: left;
+    position: relative;
+}
+
+header nav ul {
+    list-style-type:none;
+    overflow: hidden;
+    float: left;
+    position: relative;
+}
+
+nav{
+    width: 80%;
+    float: right;
+}
+
+header nav ul li {
+    float: left;
+}
+
+header nav ul li a {
+    display: block;
+    background-color: rgb(36, 17, 48);
+    color: white;
+    width: 120px;
+    text-align: center;
+    padding: 4px 0px;
+    text-decoration: none;
+}
+
+header nav ul li a:hover, header nav ul li a:active {
+    background-color: gray;
+}
+
+#heroSection {
+    width: 960px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.homebanner, .packagebanner {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+#contentSection, #topmeal {
+    width: 100%;
+}
+
+#contentSection h2, #topmeal h2 {
+    text-align: center;
+}
+
+#allcontent {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 316px 10px 10px;
+    width: 960px;
+}
+
+#contentdata {
+    margin: 20px;
+    float: left;
+    text-align: center;
+}
+
+#contentdata img {
+    width: 150px;
+}
+
+#contentdata h5 {
+    font-style: italic;
+    color: grey;
+}
+
+#alltopmeal {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 316px 10px 10px;
+    width: 100%;
+}
+
+#topmealitems {
+    margin: 20px;
+    float:left;
+    text-align: center;
+}
+
+#topmealitems img, #packagelist img {
+    width: 150px;
+}
+
+#topmealitems h4 {
+    font-style: italic;
+    color: palevioletred;
+}
+
+footer {
+    width: 960px;
+    display: grid;
+    grid-template-columns: 100%;
+    background-color: black;
+}
+
+footer nav ul {
+    list-style-type:none;
+    overflow: hidden;
+    float: left;
+    position: relative;
+}
+
+#footermenu nav ul li, #socialmedia nav ul li {
+    float: left;
+}
+
+#footermenu nav ul li a, #socialmedia nav ul li a {
+    display: block;
+    background-color: white(36, 17, 48);
+    color: purple;
+    width: 120px;
+    padding: 4px 0px;
+    text-decoration: none;
+}
+
+#footermenu nav ul li a:hover, #footermenu nav ul li a:active {
+    background-color: gray;
+}
+
+#socialmedia nav ul li a:hover, #socialmedia nav ul li a:active {
+    background-color: gray;
+}
+
+#allpackages {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 960px;
+}
+
+#packagelist {
+    margin: 20px;
+    float:left;
+    text-align: center;
+}
+
+#packagelist img {
+    width: 150px;
+}
+
+#packagelist #istop {
+    font-style: italic;
+    color: red;
+}
+
+#loginform, #registerform, #addform, #updateform {
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid black;
+    border-spacing: 20px;
+}
+
+#button{
+    color: palevioletred
+}
+
+#cartlist{
+    width: 300px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+}
+
+#descpic {
+    float: left;
+    max-width: 60%;
+    padding-right: 20px;
+}
+
+#selectform, #updateform{
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid black;
+    border-spacing: 20px;
+    margin-bottom: 30px;
+}
+
+#SignUp, #login {
+    background-color: sandybrown;
+    width: 100px;
+    height: 30px;
+    color: white;
+}
+
+#formheading {
+    text-align: center;
+}
+
+#forgotpw {
+    font-style: italic;
+    color: palevioletred;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+form div {
+    color: red;
+}
+
+@media only screen and (max-device-width:768px) {
+    #topmealitems {
+        margin: 20px;
+        float: left;
+        text-align: center;
+        width: 100%;
+        font-size: 25px;
+    }
+    #alltopmeal {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 400px;
+        width: 100%;
+        height: 800px;
+    }
+    #topmealitems img{
+        width: 185px;
+    }
+    form {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 5px;
+        border: 1px solid black;
+        border-spacing: 20px;
+    }
+    header footer{
+        width: 100%
+    }
+    
+    #packagelist {
+        margin: 20px;
+        float: left;
+        text-align: center;
+        width: 100%;
+        font-size: 25px;
+    }
+    #allpackages {
+        display: grid;
+        grid-template-columns: 100%;
+        width: 100%;
+        height: 6000px;
+    }
+    #packagelist img {
+        width: 450px;
+    }
+
+    #mealpackage, h2{
+        text-align: center;
+        font-size: 60px;
+    }
+}
